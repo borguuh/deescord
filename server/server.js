@@ -15,6 +15,10 @@ app.use(express.json());
 app.use(
   cors({
     origin: process.env.CLIENT_URL,
+    credentials: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders:
+      "Origin, X-Requested-With, Content-Type, Accept, Authorization, X-CSRF-Token",
   })
 );
 // register the routes
