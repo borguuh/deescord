@@ -3,7 +3,6 @@ import { logout } from "./shared/utils/auth";
 
 const apiClient = axios.create({
   baseURL: process.env.REACT_APP_API_BASE_URL || "http://localhost:5002/api",
-  timeout: 1000,
 });
 
 apiClient.interceptors.request.use(
